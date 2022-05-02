@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="css/index4.css">
+</head>
+<body> 
+    
+  <CENTER>
+     <div class="calc">
+         <h1>Calculator</h1>
+         <table>
+              <tr>
+                 <td>Bill:</td>
+                 <td><input type="text" id="bill"> </td>
+              </tr>
+         </table>
+          <button onclick="calculate()">Calculate</button>
+           <table>
+              <tr>
+                  <td>Tip:</td>
+                  <td><input type="text" id="tip"> </td>
+              </tr>
+           </table>
+     </div>
+  </CENTER>
+
+  <script>
+       function calculate() {
+         var bill = document.getElementById("bill").value;
+    
+    
+         if (bill>=0 && bill<100) {
+             document.getElementById("tip").value="0";
+       
+         } else if(bill>=100 && bill<300) {
+               document.getElementById("tip").value=bill*0.1;
+       
+     
+         } else if (bill>=300 && bill<500) {
+               document.getElementById("tip").value=bill*0.05;
+       
+     
+         } else if (bill>=500) {
+                document.getElementById("tip").value=bill*0.03;
+                      
+         }
+           else {
+             alert("Not valid");
+         }
+       } 
+    </script>
+</body>
+</html>
+
+
+
+
+
